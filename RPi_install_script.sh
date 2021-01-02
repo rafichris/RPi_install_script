@@ -27,3 +27,8 @@ if [ ! "${systemd}" = "systemd" ]; then
   exit 100
 fi
 
+echo "Updating repos before installing..."
+apt-get update
+
+echo "Installing lsb_release..."
+apt-get --yes --no-install-recommends --reinstall install lsb-release
