@@ -37,5 +37,5 @@ echo "Install prerequisites..."
 echo "apt-get --yes --no-install-recommends install ..."
 
 echo "Install webserver"
-apt-get --yes --no-install-recommendsinstall lighttpd
+apt-get --yes --no-install-recommends install lighttpd
 
