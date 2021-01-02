@@ -28,14 +28,16 @@ if [ ! "${systemd}" = "systemd" ]; then
 fi
 
 echo "Updating repos before installing..."
-apt-get update
+#apt-get update
 
 echo "Installing lsb_release..."
-apt-get --yes --no-install-recommends --reinstall install lsb-release
+#apt-get --yes --no-install-recommends --reinstall install lsb-release
  
 echo "Install prerequisites..."
-echo "apt-get --yes --no-install-recommends install ..."
+#apt-get --yes --no-install-recommends install
 
 echo "Install webserver"
 apt-get --yes --no-install-recommends install lighttpd
 
+echo "Install samba server"
+apt-get install install -y samba samba-common-bin smbclient cifs-utils
