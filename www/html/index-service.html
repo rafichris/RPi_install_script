@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMART HOME - SERVICE</title>
+    <link rel="stylesheet" href="metrostyle.css">
+  </head>
+  <body>
+
+    <div class="metro">
+      <div class="l1">
+          
+          <a href="index.html">
+              <li class="item blue">
+              <i><ion-icon name="apps"></ion-icon></i>
+              <span>SMARTHOME</span></li>
+          </a> 
+          
+
+          <!-- NodeRed -->
+          <a href="http://192.168.178.223:1880">
+              <li class="item yellow">
+              <i><ion-icon src="https://nodered.org/about/resources/media/node-red-icon.svg"></ion-icon></i>
+              <span>NodeRed Admin</span></li>
+          </a> 
+          
+          <!-- Grafana -->
+          <!--<a href="http://192.168.178.223:3000">-->
+          <a href="http://192.168.178.223:3000/d/egxa1-WRk/temperatures?orgId=1&refresh=1m&from=now-3d&to=now&kiosk=tv">
+              <li class="item cyan">
+              <i><ion-icon src="https://raw.githubusercontent.com/grafana/grafana/master/public/img/grafana_icon.svg"></ion-icon></i>
+              <span>Grafana<span class="tooltiptext">USER:PASSWORD</span></span></li>
+          </a>
+          
+          <!-- OMV -->
+          <a href="http://192.168.178.222">
+              <li class="item green">
+              <i><ion-icon name="menu-outline"></ion-icon></i>
+              <span>OpenMediaVault<span class="tooltiptext">USER:PASSWORD</span></span></li>
+          </a>
+
+          <!-- UniFi -->
+          <a href="https://192.168.178.221:8443">
+              <li class="item red twin">
+              <i><ion-icon src="https://upload.wikimedia.org/wikipedia/en/9/93/Ubiquiti_Networks_2016.svg"></ion-icon></i>
+              <span>UniFi Controller<span class="tooltiptext">USER:PASSWORD</span></span></li>
+          </a>
+          
+          <a href="https://192.168.178.221:8443">
+              <li class="item red">
+              <i><ion-icon src="https://upload.wikimedia.org/wikipedia/en/9/93/Ubiquiti_Networks_2016.svg"></ion-icon></i>
+              <span>UniFi AP (EG) <br>192.168.178.231</span></li>
+          </a>
+          <a href="https://192.168.178.221:8443">
+              <li class="item red">
+              <i><ion-icon src="https://upload.wikimedia.org/wikipedia/en/9/93/Ubiquiti_Networks_2016.svg"></ion-icon></i>
+              <span>UniFi AP (OG) <br>192.168.178.232</span></li>
+          </a>
+          
+          <!-- PiHole -->
+          <a href="http://192.168.178.221:80/admin">
+              <li class="item purple">
+              <i><ion-icon name="globe-outline"></ion-icon></i>
+              <span>Pi-Hole</span></li>
+          </a>
+          
+          <!-- GIRA IP Interface -->
+          <a href="http://192.168.178.239:8080">
+              <li class="item orange">
+              <i><ion-icon src="https://upload.wikimedia.org/wikipedia/commons/2/20/Logo_Gira_Giersiepen.svg"></ion-icon></i>
+              <span>GIRA KNX IP Interface</span></li>
+          </a> 
+          
+          <!-- Livento -->
+          <a href="http://192.168.178.243">
+              <li class="item yellow">
+              <i><ion-icon name="settings-outline"></ion-icon></i>
+              <span>LiVento ALD-20 AEROline</span></li>
+          </a> 
+          
+          <!-- eKey -->
+          <a href="https://www.ekey.net/assets/media_center/DE/Bedienungsanleitung_ekey_home_SE_mini_micro_de_web_ID203_3004.pdf">
+              <li class="item ekey">
+              <i><ion-icon name="finger-print-outline"></ion-icon></i>
+              <span>eKey Fingerprint Manual</span></li>
+          </a>
+          <a href="https://www.ekey.net/assets/media_center/DE/Bedienungsanleitung_ekey_home_SE_mini_micro_de_web_ID203_3004.pdf">
+              <li class="item ekey twin">
+              <span>ekey home FS IN 2.0 T Bluetooth RFID (101670) <br> eKey home SE mini 2 (101770)<br> pairing:999999/app:1234</span></li>
+          </a>
+
+          <!-- LiVento/ModBus Pastebin -->
+          <a href="https://pastebin.com/u/rafi_chris">
+              <li class="item orange">
+              <i><ion-icon name="copy-outline"></ion-icon></i>
+              <span>ModBus Code / PasteBin</span></li>
+          </a>
+
+          <!-- LiVento Installations und Bedienungsanleitung -->
+          <a href="https://www.dropbox.com/s/h773xq1vnzyr48k/bedinungsanleitung_ald_20.pdf?dl=0">
+              <li class="item orange">
+              <i><ion-icon name="copy-outline"></ion-icon></i>
+              <span>LiVento ALD 20</span></li>
+          </a>
+
+          <!-- LiVento Installations und Bedienungsanleitung -->
+          <a href="https://www.dropbox.com/s/g8rhzb1lwe6ijvb/Installationsanleitung%20ALMB_Modbus.pdf?dl=0">
+              <li class="item orange">
+              <i><ion-icon name="copy-outline"></ion-icon></i>
+              <span>LiVento ModBus</span></li>
+          </a>
+
+          <!-- XY-MD02 -->
+          <a href="https://www.dropbox.com/s/21o4hi31qj3ani6/%20XY-MD02%20information.pdf?dl=0">
+              <li class="item blue">
+              <i><ion-icon name="copy-outline"></ion-icon></i>
+              <span>Humidity Sensor XY-MD02 ModBus</span></li>
+          </a>
+
+          <!-- R4aVA07 -->
+          <a href="https://www.dropbox.com/sh/wv15xgxjfx0trmm/AAAoG1iwoxZjNGd64_yIhECKa?dl=0">
+              <li class="item blue">
+              <i><ion-icon name="copy-outline"></ion-icon></i>
+              <span>Voltage Sensor R4AVA07 ModBus</span></li>
+          </a>
+
+          <!-- CE040 -->
+          <a href="https://www.dropbox.com/sh/kgwbfrg0rp1a8p7/AADB0LBSywmWuxttzQnNYiOEa?dl=0">
+              <li class="item blue">
+              <i><ion-icon name="copy-outline"></ion-icon></i>
+              <span>4 Channel Relay CE040 ModBus</span></li>
+          </a>
+
+          <!-- TTR 56E -->
+          <a href="https://www.dropbox.com/s/1f5lxxja9gqguzb/TRT-BA-TTR56E-TC-004-DE.pdf?dl=0">
+              <li class="item yellow">
+              <i><ion-icon name="copy-outline"></ion-icon></i>
+              <span>TTR 56E Entfeuchtungsgerät</span></li>
+          </a>
+
+          
+          <a href="https://www.photovoltaikforum.com/wissen/entry/26-teil-1-aufsetzen-des-raspberry-pi-s/">
+              <li class="item silver">
+              <i><ion-icon name="logo-youtube"></ion-icon></i>
+              <span>Installanleitung: InfluxDB + Grafana</span></li>
+          </a>
+          <a href="https://tpolo.de/raspberry-pi4-grafana-debian-buster-installieren">
+              <li class="item silver">
+              <i><ion-icon name="logo-youtube"></ion-icon></i>
+              <span>Install Grafana</span></li>
+          </a>
+          <a href="https://simonhearne.com/2020/pi-influx-grafana/">
+              <li class="item silver">
+              <i><ion-icon name="logo-youtube"></ion-icon></i>
+              <span>Installing InfluxDB & Grafana on Raspberry Pi</span></li>
+          </a>
+          <a href="https://www.youtube.com/watch?v=LdcFQJvjdqI">
+              <li class="item silver">
+              <i><ion-icon name="logo-youtube"></ion-icon></i>
+              <span>Metro UI Tutorial</span></li>
+          </a>
+
+
+
+
+
+          <a href="https://www.youtube.com/watch?v=LdcFQJvjdqI">
+              <li class="item silver">
+              <i><ion-icon name="logo-youtube"></ion-icon></i>
+              <span>Metro UI Tutorial</span></li>
+          </a>
+          
+          <a href="https://ionicons.com/">
+              <li class="item silver">
+              <i><ion-icon name="logo-ionic"></ion-icon></i>
+              <span>logo-ionic</span></li>
+          </a>
+          
+          <a href="https://flatuicolors.com/palette/defo">
+              <li class="item silver">
+              <i><ion-icon name="color-palette"></ion-icon></i>
+              <span>Flat UI Color</span></li>
+          </a>
+
+         <a href="https://forum.iobroker.net/topic/4696/install-node-red/2">
+              <li class="item silver">
+              <i><ion-icon src="https://nodered.org/about/resources/media/node-red-icon.svg"></ion-icon></i>
+              <span>Broken NodeRed after Update</span></li>
+          </a>
+
+          <a href="https://gist.github.com/mohnen/6923d5eb2e4547bb7e5bd90546d2ee80">
+              <li class="item silver">
+              <i><ion-icon src="https://nodered.org/about/resources/media/node-red-icon.svg"></ion-icon></i>
+              <span>FavIcon 1</span></li>
+          </a>
+
+          <a href="https://forum.iobroker.net/topic/17294/node-red-persistence-funktion-einschalten/2">
+              <li class="item silver">
+              <i><ion-icon src="https://nodered.org/about/resources/media/node-red-icon.svg"></ion-icon></i>
+              <span>FavIcon 2</span></li>
+          </a>
+
+
+          <a href="https://medium.com/@timebarrier/install-pivpn-with-wireguard-on-a-raspberry-pi-with-pihole-19d95ba8d206">
+              <li class="item blue">
+              <i><ion-icon src="https://upload.wikimedia.org/wikipedia/commons/6/67/Breezeicons-devices-22-network-vpn.svg"></ion-icon></i>
+              <span>PiVPN / WireGuard</span></li>
+          </a>         
+
+          <!-- Plex Anleitungen -->
+          <a href="https://snapcraft.io/install/plexmediaserver/raspbian">
+              <li class="item green">
+              <i><ion-icon src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Plex_vector_logo.svg"></ion-icon></i>
+              <span>PLEX</span></li>
+          </a>
+ 
+         <!-- RASPBERRY SETUP -->
+          <a href="https://linuxhint.com/install_raspberry_pi_os_without_external_monitor/">
+              <li class="item blue">
+              <i><ion-icon src="https://upload.wikimedia.org/wikipedia/en/c/cb/Raspberry_Pi_Logo.svg"></ion-icon></i>
+              <span>Raspberry Headless installation</span></li>
+          </a>
+
+         <!-- SSH -->
+          <a href="./index-ssh.html">
+              <li class="item ssh">
+              <i><ion-icon src="icons/ssh.svg"></ion-icon></i>
+              <span>SSH</span></li>
+          </a>
+          
+
+      </div>
+        
+    </div>
+
+  
+      
+
+      <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMART HOME - SSH</title>
+    <link rel="stylesheet" href="metrostyle.css">
+  </head>
+  <body>
+
+    <div class="metro">
+      <div class="l1">
+          
+          <a href="index.html">
+              <li class="item blue">
+              <i><ion-icon name="apps"></ion-icon></i>
+              <span>SMARTHOME</span></li>
+          </a> 
+          
+          <!-- UniFi -->
+          <a href="ssh://pi:raspberry@192.168.178.221">
+              <li class="item ssh">
+              <i><ion-icon src="https://upload.wikimedia.org/wikipedia/en/9/93/Ubiquiti_Networks_2016.svg"></ion-icon></i>
+              <span>221 UniFi SSH<span class="tooltiptext">pi:raspberry</span></span></li>
+          </a>
+
+          <!-- OMV -->
+          <a href="ssh://pi:raspberry@192.168.178.222">
+              <li class="item ssh">
+              <i><ion-icon name="menu-outline"></ion-icon></i>
+              <span>222 OpenMediaVault SSH<span class="tooltiptext">pi:raspberry</span></span></li>
+          </a>  
+          
+          <!-- NodeRed -->
+          <a href="ssh://pi:raspberry@192.168.178.223">
+              <li class="item ssh">
+              <i><ion-icon src="https://nodered.org/about/resources/media/node-red-icon.svg"></ion-icon></i>
+              <span>223 NodeRed SSH</span></li>
+          </a>
+
+      </div>
+        
+    </div>
+
+      <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+  </body>
+</html>
+
