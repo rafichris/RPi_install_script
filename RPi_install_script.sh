@@ -41,7 +41,9 @@ apt-get --yes --no-install-recommends install lighttpd
 cd /tmp/
 rm -Rf RPi_install_script
 git clone https://github.com/rafichris/RPi_install_script.git
-/tmp/RPi_install_script/www/html
+chmod 777 -R /tmp/RPi_install_script/www
+cp -a /tmp/RPi_install_script/www/html/* /var/www/html/.
+cp -a /www/html_bak/* /var/www/html/.
 
 
 
