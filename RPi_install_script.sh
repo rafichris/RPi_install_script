@@ -1,8 +1,6 @@
 #!/bin/bash
 #
-# shellcheck disable=SC1090,SC1091,SC1117,SC2016,SC2046,SC2086,SC2174
-#
-# Copyright (c) 2015-2020 OpenMediaVault Plugin Developers
+# Copyright (c) 2021 C. Rafetzeder
 # Copyright (c) 2017-2020 Armbian Developers
 #
 # This file is licensed under the terms of the GNU General Public
@@ -13,7 +11,7 @@
 # https://github.com/armbian/config/blob/master/debian-software
 # https://forum.openmediavault.org/index.php/Thread/25062-Install-OMV5-on-Debian-10-Buster/
 #
-# version: 1.2.11
+# version: 1.0
 #
 
 if [[ $(id -u) -ne 0 ]]; then
