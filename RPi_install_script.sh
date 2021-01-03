@@ -108,7 +108,7 @@ sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.
 
 apt-get update
 apt-get --yes --no-install-recommends install jenkins
-service jenkins status
+#service jenkins status
 
 echo "Jenkins installed ..."
 echo " -> Next steps: https://developer-blog.net/raspberry-pi-als-jenkins-server-teil-2/"
