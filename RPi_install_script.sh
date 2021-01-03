@@ -43,12 +43,10 @@ rm -Rf RPi_install_script
 git clone https://github.com/rafichris/RPi_install_script.git
 chmod 777 -R /tmp/RPi_install_script/www
 cp -a /tmp/RPi_install_script/www/html/* /var/www/html/.
-cp -a /www/html_bak/* /var/www/html/.
-
-
+#cp -a /www/html_bak/* /var/www/html/.
 
 echo "Install samba server"
-apt-get install install -y samba samba-common-bin smbclient cifs-utils
+apt-get  --yes --no-install-recommends install samba samba-common-bin smbclient cifs-utils
 
 cp -a /etc/samba/smb.conf /etc/samba/smb.conf.bak.$(date "+%Y.%m.%d-%H.%M.%S")
 
@@ -102,3 +100,16 @@ locking = no
 EOT
 
 service smbd restart
+
+echo "Install Jenkins DevOp..."
+# https://developer-blog.net/raspberry-pi-als-jenkins-server/
+apt-get --yes --no-install-recommends install openjdk-11-jdk
+
+wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
+sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+
+apt-get update
+apt-get --yes --no-install-recommends install jenkins
+
+echo "Jenkins installed ..."
+echo " -> Next steps: https://developer-blog.net/raspberry-pi-als-jenkins-server-teil-2/"
