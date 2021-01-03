@@ -13,5 +13,5 @@
 #### -OR-
 #### sudo curl -sSL https://raw.githubusercontent.com/rafichris/RPi_install_script/main/RPi_install_script.sh | sudo bash
 
-### Further Jenkins configuration
+### Jenkins configuration tutorial
 https://developer-blog.net/raspberry-pi-als-jenkins-server-teil-2/
