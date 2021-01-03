@@ -33,11 +33,70 @@ echo "Updating repos before installing..."
 echo "Installing lsb_release..."
 #apt-get --yes --no-install-recommends --reinstall install lsb-release
  
-echo "Install prerequisites..."
-#apt-get --yes --no-install-recommends install
+echo "Install github "
+apt-get --yes --no-install-recommends install git
 
 echo "Install webserver"
 apt-get --yes --no-install-recommends install lighttpd
+cd /tmp/
+rm -Rf RPi_install_script
+git clone https://github.com/rafichris/RPi_install_script.git
+/tmp/RPi_install_script/www/html
+
+
 
 echo "Install samba server"
 apt-get install install -y samba samba-common-bin smbclient cifs-utils
+
+cp -a /etc/samba/smb.conf /etc/samba/smb.conf.bak.$(date "+%Y.%m.%d-%H.%M.%S")
+
+cat << EOT > /etc/samba/smb.conf
+[global]
+workgroup = WORKGROUP
+security = user
+server role = standalone server
+obey pam restrictions = yes
+unix password sync = yes
+
+# For Unix password sync to work on a Debian GNU/Linux system, the following
+# parameters must be set (thanks to Ian Kahan <<kahan@informatik.tu-muenchen.de> for
+# sending the correct chat script for the passwd program in Debian Sarge).
+   passwd program = /usr/bin/passwd %u
+   passwd chat = *Enter\snew\s*\spassword:* %n\n *Retype\snew\s*\spassword:* %n\n *password\supdated\ssuccessfu$
+
+# This boolean controls whether PAM will be used for password changes
+# when requested by an SMB client instead of the program listed in
+# 'passwd program'. The default is 'no'.
+   pam password change = yes
+
+# This option controls how unsuccessful authentication attempts are mapped
+# to anonymous connections
+   map to guest = bad user
+   guest account = pi
+
+# Allow users who've been granted usershare privileges to create
+# public shares, not just authenticated ones
+   usershare allow guests = yes
+
+#[pi]
+#comment = Pi Directories
+#browseable = yes
+#path = /home/pi
+#read only = no
+#create mask = 0775
+#directory mask = 0775
+
+[www]
+comment = Server HTML root
+path = /var/www
+browsable = yes
+public = no
+guest ok = yes
+read only = no
+writeable = yes
+create mask = 0755
+directory mask = 0755
+locking = no
+EOT
+
+service smbd restart
